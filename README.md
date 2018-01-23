@@ -21,4 +21,5 @@ $ java -cp "target/jni-jnr-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetP
 
 
 参见资料：
+
 2013-07 Charles Nutter: Java Native Runtime <http://www.oracle.com/technetwork/java/jvmls2013nutter-2013526.pdf>
