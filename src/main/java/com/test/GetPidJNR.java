@@ -3,11 +3,14 @@ package com.test;
 import jnr.ffi.LibraryLoader;
 
 public class GetPidJNR {
+
     public interface LibC {
         long getpid();
     }
 
     public static void main(String[] args) {
+        System.setProperty("jaffl.compiler.dump", "true");
+
         // JNR 获取 pid
         LibC libc = LibraryLoader.create(LibC.class).load("c");
         System.out.println(libc.getpid());
