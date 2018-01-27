@@ -1,5 +1,5 @@
 
-通过 [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) 实现调用 `getpid` vs. 通过 [JNR](https://github.com/jnr/jnr-ffi) 实现调用 `getpid` 代码示例
+Java 本地方法调用实现调用 `getpid` 对比，[JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) vs. [JNA](https://github.com/java-native-access/jna) vs. [JNR](https://github.com/jnr/jnr-ffi)
 
 JNI 示例编译与运行（Mac 环境）：
 
@@ -12,13 +12,20 @@ $ java -Djava.library.path=`pwd` -cp "target/classes" com.test.GetPidJNI
 ```
 
 
+JNA 示例编译与运行：
+
+```
+$ mvn install
+$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJNA
+```
+
+
 JNR 示例编译与运行：
 
 ```
 $ mvn install
-$ java -cp "target/jni-jnr-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJNR
+$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJNR
 ```
-
 
 参见资料：
 
