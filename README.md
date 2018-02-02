@@ -45,7 +45,7 @@ BenchmarkFFI.testGetPidJni        thrpt   10  77852.899 ± 3167.101  ops/ms
 BenchmarkFFI.testGetPidJnr        thrpt   10  58261.657 ± 5187.550  ops/ms
 ```
 
-即：JNI > JNR > JNA (Direct Mapping) > JNA (Interface Mapping)
+**即：JNI > JNR > JNA (Direct Mapping) > JNA (Interface Mapping)**
 
 参见资料：
 
