@@ -1,6 +1,6 @@
 package com.test;
 
-public class GetPidJNI {
+public class GetPidJni {
     public static native long getpid();
 
     static {

@@ -3,7 +3,12 @@ package com.test;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 
-public class GetPidJNA {
+/**
+ * Direct Mapping
+ * <p>
+ * https://github.com/java-native-access/jna/blob/master/www/DirectMapping.md
+ */
+public class GetPidJna {
 
     public interface LibC extends Library {
         long getpid();
