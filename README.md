@@ -12,12 +12,12 @@ $ java -Djava.library.path=`pwd` -cp "target/classes" com.test.GetPidJni
 ```
 
 
-JNA 示例编译与运行：
+JNA 示例编译与运行（包括 [Interface Mapping](https://github.com/java-native-access/jna/blob/master/www/FunctionalDescription.md#interface-mapping) 和 [Direct Mapping](https://github.com/java-native-access/jna/blob/master/www/FunctionalDescription.md#direct-mapping) 两种方式）：
 
 ```
 $ mvn install
 $ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJna
-$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJna
+$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJnaDirect
 ```
 
 
@@ -27,6 +27,25 @@ JNR 示例编译与运行：
 $ mvn install
 $ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJnr
 ```
+
+性能测试代码：
+
+```
+$ mvn install
+$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.BenchmarkFFI
+```
+
+性能测试结果：
+
+```
+Benchmark                          Mode  Cnt      Score      Error   Units
+BenchmarkFFI.testGetPidJna        thrpt   10   8225.209 ±  206.829  ops/ms
+BenchmarkFFI.testGetPidJnaDirect  thrpt   10  10257.505 ±  736.135  ops/ms
+BenchmarkFFI.testGetPidJni        thrpt   10  77852.899 ± 3167.101  ops/ms
+BenchmarkFFI.testGetPidJnr        thrpt   10  58261.657 ± 5187.550  ops/ms
+```
+
+即：JNI > JNR > JNA (Direct Mapping) > JNA (Interface Mapping)
 
 参见资料：
 
