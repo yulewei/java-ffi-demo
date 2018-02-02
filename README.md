@@ -38,6 +38,8 @@ $ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.Ben
 JMH 性能测试结果：
 
 ```
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
 Benchmark                          Mode  Cnt      Score      Error   Units
 BenchmarkFFI.testGetPidJna        thrpt   10   8225.209 ±  206.829  ops/ms
 BenchmarkFFI.testGetPidJnaDirect  thrpt   10  10257.505 ±  736.135  ops/ms
