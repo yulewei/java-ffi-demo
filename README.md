@@ -28,14 +28,14 @@ $ mvn install
 $ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJnr
 ```
 
-性能测试代码：
+JMH 性能测试代码：
 
 ```
 $ mvn install
 $ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.BenchmarkFFI
 ```
 
-性能测试结果：
+JMH 性能测试结果：
 
 ```
 Benchmark                          Mode  Cnt      Score      Error   Units
