@@ -5,10 +5,10 @@ JNI 示例编译与运行（Mac 环境）：
 
 ```
 $ mkdir -p target/classes
-$ javac src/main/java/com/test/GetPidJNI.java -d "target/classes"
-$ javah -cp "target/classes" com.test.GetPidJNI
-$ gcc -I $JAVA_HOME/include -I $JAVA_HOME/include/darwin -dynamiclib -o libgetpidjni.dylib com_test_GetPidJNI.c
-$ java -Djava.library.path=`pwd` -cp "target/classes" com.test.GetPidJNI
+$ javac src/main/java/com/test/GetPidJni.java -d "target/classes"
+$ javah -cp "target/classes" com.test.GetPidJni
+$ gcc -I $JAVA_HOME/include -I $JAVA_HOME/include/darwin -dynamiclib -o libgetpidjni.dylib com_test_GetPidJni.c
+$ java -Djava.library.path=`pwd` -cp "target/classes" com.test.GetPidJni
 ```
 
 
@@ -16,7 +16,8 @@ JNA 示例编译与运行：
 
 ```
 $ mvn install
-$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJNA
+$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJna
+$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJna
 ```
 
 
@@ -24,7 +25,7 @@ JNR 示例编译与运行：
 
 ```
 $ mvn install
-$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJNR
+$ java -cp "target/java-ffi-1.0-SNAPSHOT-jar-with-dependencies.jar" com.test.GetPidJnr
 ```
 
 参见资料：
