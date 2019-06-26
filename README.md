@@ -1,3 +1,6 @@
+Java 外部函数接口：JNI, JNA, JNR <http://nullwy.me/2018/01/java-ffi/>
+
+---
 
 Java 本地方法调用实现调用 `getpid` 对比，[JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) vs. [JNA](https://github.com/java-native-access/jna) vs. [JNR](https://github.com/jnr/jnr-ffi)
 
